@@ -4,19 +4,42 @@ import styled from "@emotion/styled";
 export const Flex = styled.div`
   display: flex;
 `;
+export const Column = styled(Flex)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const TagContainer = styled(Column)`
+  width: 100%;
+`;
 
 export const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  /* width: 100%; */
 `;
 
 export const LogoContainer = styled(Flex)`
   margin: 50px 0;
   align-items: "center";
   justify-content: "center";
+`;
+
+export const HeadingsContainer = styled.div`
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  justify-items: center;
+  /* justify-content: space-between; */
+  gap: 20px;
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Tagline = styled.h1`
@@ -26,9 +49,12 @@ export const Tagline = styled.h1`
 export const Description = styled.p`
   font-size: 1.1rem;
   text-align: center;
-  width: 50%;
+  width: 100%;
   color: #87879d;
   line-height: 1.6;
+  @media (max-width: 1200px) {
+    width: 50%;
+  }
 `;
 
 export const ButtonContainer = styled(Flex)`
@@ -57,5 +83,23 @@ export const WhatIsItButton = styled(BaseCtaAnchor)`
   background-color: var(--clr-melon);
   &:hover {
     background-color: var(--hover-melon);
+  }
+`;
+
+export const PeopleMobileImage = styled.div`
+  @media (max-width: 1200px) {
+    display: none;
+  }
+`;
+export const ResponsiveBanner = styled(Flex)`
+  background-image: url("https://res.cloudinary.com/circlesulfisoxazole/image/upload/v1682838572/image-hero_qpdtey.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 50px;
+  display: none;
+  @media (max-width: 1200px) {
+    display: block;
   }
 `;
