@@ -1,5 +1,5 @@
-// components/StyledHeading.tsx
 import styled from "@emotion/styled";
+import whatsapp from "./../images/icon-whatsapp.svg";
 
 export const Flex = styled.div`
   display: flex;
@@ -16,11 +16,11 @@ export const TagContainer = styled(Column)`
 `;
 
 export const Section = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* width: 100%; */
 `;
 
 export const LogoContainer = styled(Flex)`
@@ -30,12 +30,10 @@ export const LogoContainer = styled(Flex)`
 `;
 
 export const HeadingsContainer = styled.div`
-  /* width: 100%; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   justify-items: center;
-  /* justify-content: space-between; */
   gap: 20px;
   @media (max-width: 1200px) {
     grid-template-columns: 1fr;
@@ -44,21 +42,24 @@ export const HeadingsContainer = styled.div`
 
 export const Tagline = styled.h1`
   margin: 0px;
+  padding: 10px;
 `;
 
 export const Description = styled.p`
+  padding: 10px;
   font-size: 1.1rem;
   text-align: center;
   width: 100%;
   color: #87879d;
   line-height: 1.6;
   @media (max-width: 1200px) {
-    width: 50%;
+    width: 100%;
   }
 `;
 
 export const ButtonContainer = styled(Flex)`
   gap: 20px;
+  padding: 10px;
 `;
 
 export const BaseCtaAnchor = styled.a`
@@ -68,7 +69,7 @@ export const BaseCtaAnchor = styled.a`
   padding: 17px 40px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 `;
@@ -99,6 +100,7 @@ export const ResponsiveBanner = styled(Flex)`
   height: 400px;
   margin-bottom: 50px;
   display: none;
+
   @media (max-width: 1200px) {
     display: block;
   }

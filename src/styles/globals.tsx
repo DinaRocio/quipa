@@ -21,6 +21,7 @@ const globalStyles = css`
   a {
     color: inherit;
     text-decoration: none;
+    list-style: none;
   }
 
   h1 {

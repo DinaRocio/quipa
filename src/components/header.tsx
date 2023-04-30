@@ -13,6 +13,7 @@ import {
 } from "@/ui/heading";
 import Image from "next/image";
 import React from "react";
+import whatsapp from "./../images/icon-whatsapp.svg";
 
 export const Header = () => {
   return (
@@ -44,11 +45,24 @@ export const Header = () => {
         <TagContainer>
           <Tagline>Unlock your Language Potential</Tagline>
           <Description>
-            Quipa, a vibrant community dedicated to helping you enhance your
-            language skills while having fun and making friends.
+            Quipa, a vibrant community based in Cajamarca 🇵🇪, dedicated to
+            helping you enhance your language skills 🧠 while having fun and
+            making friends 🤩.
           </Description>
           <ButtonContainer>
-            <GetStartedButton>Get Started</GetStartedButton>
+            <GetStartedButton
+              href="https://wa.me/+51976041753?text=Hello I want to be part of Quipa!"
+              target="_blank"
+            >
+              Get Started
+              <Image
+                src={whatsapp}
+                alt={"send us a whatsapp"}
+                width={16}
+                height={16}
+                style={{ marginLeft: "2px" }}
+              />
+            </GetStartedButton>
             <WhatIsItButton>What is it?</WhatIsItButton>
           </ButtonContainer>
         </TagContainer>
