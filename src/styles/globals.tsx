@@ -3,8 +3,9 @@ import { css, Global } from "@emotion/react";
 
 const globalStyles = css`
   /* Import the Red Hat Display font */
-  /* @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap"); */
-  @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap");
+
+  /* @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap"); */
 
   /* Add your global styles here */
   body {
@@ -54,6 +55,8 @@ const globalStyles = css`
     --hover-yellow: #ffff26;
 
     /* Typography */
+
+    --clr-gray-dark: #28283d;
 
     /* font family */
     --ff-red-hat: "Red Hat Display", sans-serif;

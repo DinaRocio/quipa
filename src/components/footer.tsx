@@ -4,7 +4,7 @@ import {
   ResponsiveFooter,
   TagFooter,
   TaglineSection,
-} from "@/ui/footer";
+} from "@/ui/infoBanner";
 import {
   ButtonContainer,
   Description,
@@ -25,24 +25,10 @@ import SocialMedia from "./socialMedia";
 export const Footer = () => {
   return (
     <Section>
-      <ResponsiveFooter>
-        <Overlay />
-      </ResponsiveFooter>
-      <TaglineSection>
-        <TagFooter>Experience more together!</TagFooter>
-        <FooterDescription>
-          Join Quipa Language Club today and begin your journey of exploring
-          languages!
-        </FooterDescription>
+      <h2 style={{ color: "#2657a7" }}>Quipa</h2>
+      <SocialMedia />
 
-        <WhatIsItButton
-          href="https://wa.me/+51976041753?text=Hello I want to be part of Quipa!"
-          target="_blank"
-        >
-          Want to be part ✌️
-        </WhatIsItButton>
-        <SocialMedia />
-      </TaglineSection>
+      {/* </TaglineSection> */}
     </Section>
   );
 };

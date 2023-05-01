@@ -2,19 +2,20 @@ import styled from "@emotion/styled";
 import facebook from "./../images/icon-facebook.svg";
 import instagram from "./../images/icon-instagram.svg";
 import twitter from "./../images/icon-twitter.svg";
+import tiktok from "./../images/icon-tiktok.svg";
 import Image from "next/image";
 
 export const SocialMediaLogo = styled.a`
-  img:hover {
+  /* img:hover {
     filter: brightness(100);
-  }
+  } */
 `;
 
 export const SocialMediaGroup = styled.ul`
   display: flex;
   flex-direction: row;
   padding: 0;
-  gap: 10px;
+  gap: 30px;
   li {
     list-style: none;
   }
@@ -27,14 +28,14 @@ export const socialNetwork = [
     alt: "facebook logo",
   },
   {
-    name: twitter,
-    svg: "https://twitter.com/dinarocio15?lang=es",
-    alt: "twitter logo",
-  },
-  {
     name: instagram,
     svg: "https://www.instagram.com/diniwirocio/?hl=es",
     alt: "instagram logo",
+  },
+  {
+    name: tiktok,
+    svg: "https://www.instagram.com/diniwirocio/?hl=es",
+    alt: "tiktok logo",
   },
 ];
 

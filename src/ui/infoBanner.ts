@@ -66,7 +66,7 @@ export const FooterDescription = styled.p`
   margin: 0px;
   text-align: center;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.2em;
   color: white;
   @media (max-width: 1200px) {

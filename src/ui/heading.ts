@@ -24,9 +24,12 @@ export const Section = styled.section`
 `;
 
 export const LogoContainer = styled(Flex)`
-  margin: 50px 0;
+  margin: 30px 0;
   align-items: "center";
   justify-content: "center";
+  @media (max-width: 768px) {
+    margin: 10px 0;
+  }
 `;
 
 export const HeadingsContainer = styled.div`
@@ -35,7 +38,7 @@ export const HeadingsContainer = styled.div`
   width: 100%;
   justify-items: center;
   gap: 20px;
-  @media (max-width: 1200px) {
+  @media (max-width: 1080px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -60,17 +63,23 @@ export const Description = styled.p`
 export const ButtonContainer = styled(Flex)`
   gap: 20px;
   padding: 10px;
+  flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const BaseCtaAnchor = styled.a`
   color: white;
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 45px;
   padding: 17px 40px;
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
+
   transition: background-color 0.3s ease;
 `;
 
@@ -88,7 +97,7 @@ export const WhatIsItButton = styled(BaseCtaAnchor)`
 `;
 
 export const PeopleMobileImage = styled.div`
-  @media (max-width: 1200px) {
+  @media (max-width: 1080px) {
     display: none;
   }
 `;
@@ -101,7 +110,8 @@ export const ResponsiveBanner = styled(Flex)`
   margin-bottom: 50px;
   display: none;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1080px) {
     display: block;
+    margin-bottom: 0px;
   }
 `;
