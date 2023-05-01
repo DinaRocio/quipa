@@ -63,7 +63,7 @@ export const Header = () => {
                 style={{ marginLeft: "2px" }}
               />
             </GetStartedButton>
-            <WhatIsItButton>What is it?</WhatIsItButton>
+            <WhatIsItButton href="/#faq">FAQ's 🙋‍♀️</WhatIsItButton>
           </ButtonContainer>
         </TagContainer>
         <PeopleMobileImage>

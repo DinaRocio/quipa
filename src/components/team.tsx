@@ -76,7 +76,7 @@ const Member = ({
 
 export const MeetTheTeam = () => {
   return (
-    <Section style={{ padding: 20 }}>
+    <Section style={{ padding: 20 }} id="team">
       <Title>Meet the Team</Title>
       <Description>
         Our team consists of passionate professionals and dedicated volunteers

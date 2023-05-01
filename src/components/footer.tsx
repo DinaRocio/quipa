@@ -12,7 +12,7 @@ import SocialMedia from "./socialMedia";
 
 export const Footer = () => {
   return (
-    <Section>
+    <Section id="footer">
       <h2 style={{ color: "#2657a7" }}>Quipa</h2>
       <SocialMedia />
 

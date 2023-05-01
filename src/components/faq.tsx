@@ -42,7 +42,7 @@ const AccordeonItem = ({ title, answer }: AccordeonItemProps) => {
 
 export const Faq = () => {
   return (
-    <FaqSection>
+    <FaqSection id="faq">
       <Image src={faqIcon} alt="girl asking questions" width={300} />
       <Container>
         <Title>FAQ</Title>

@@ -43,7 +43,7 @@ export const ActivitiesImages = [
 
 export const Activities = () => {
   return (
-    <Section style={{ margin: "40px 0px", padding: "25px" }}>
+    <Section style={{ margin: "40px 0px", padding: "25px" }} id="activities">
       <ImageContainer>
         {ActivitiesImages.map(({ imageSrc, alt }, idx) => (
           <ActivityImage
