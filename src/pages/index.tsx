@@ -6,6 +6,8 @@ import { Header } from "@/components/header";
 import { Activities } from "@/components/activities";
 import { Footer } from "@/components/footer";
 import { InfoBanner } from "@/components/banner";
+import { Faq } from "@/components/faq";
+import { MeetTheTeam } from "@/components/team";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +23,10 @@ export default function Home() {
       <main>
         <Header />
         <Activities />
-        <InfoBanner />
+
+        {/* <InfoBanner /> */}
+        <Faq />
+        <MeetTheTeam />
         <Footer />
       </main>
     </>

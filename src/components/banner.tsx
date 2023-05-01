@@ -32,7 +32,7 @@ export const InfoBanner = () => {
         <TagFooter>Join us 🚀</TagFooter>
         <FooterDescription>
           Follow Quipa Club on social media for a daily dose of language
-          learning inspiration.
+          learning inspiration. #QuipaLearn
         </FooterDescription>
 
         <WhatIsItButton

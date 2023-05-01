@@ -79,7 +79,6 @@ export const BaseCtaAnchor = styled.a`
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-
   transition: background-color 0.3s ease;
 `;
 

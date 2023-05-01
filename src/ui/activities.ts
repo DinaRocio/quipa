@@ -33,10 +33,8 @@ export const ActivityImage = styled(Flex)<ActivityImageProps>`
     hsla(192, 37%, 48%, 0.9)
   );
   background-image: url(${(props) => props.bgImage});
-  /* background-image: url(" https://res.cloudinary.com/circlesulfisoxazole/image/upload/v1682833369/todes_ekpymm.png"); */
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
-
   background-position: center;
   background-size: cover;
   color: white;
@@ -73,37 +71,22 @@ export const Caption = styled.p`
   font-weight: 900;
   line-height: 1.625;
   letter-spacing: 4px;
+  word-spacing: 20px;
   color: var(--clr-gray-dark);
-
-  /* margin-bottom: 2rem; */
 `;
 
 export const Title = styled.h2`
-  /* color: var(--clr-footer); */
   font-weight: bold;
   font-size: 40px;
   line-height: 1.125;
   margin-bottom: 2rem;
-  /* color: var(--clr-gray-dark); */
-
+  margin: 5px 0px;
   color: var(--clr-dark-blue);
-
-  @media (max-width: 1080px) {
-    width: 70%;
-  }
-  @media (max-width: 768px) {
-    width: 100%;
-  }
 `;
 
 export const Description = styled.p`
-  font-size: "18px";
+  font-size: 18px;
+  font-weight: 400;
   line-height: 1.625;
   color: var(--clr-gray-light);
-  width: 70%;
-
-  @media (max-width: 1080px) {
-    width: 100%;
-  }
-  /* margin-bottom: 2rem; */
 `;

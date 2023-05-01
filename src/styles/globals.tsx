@@ -54,6 +54,7 @@ const globalStyles = css`
     --hover-green: #15e31f;
     --hover-yellow: #ffff26;
 
+    --light-grayish-blue: hsl(240, 5%, 91%);
     /* Typography */
 
     --clr-gray-dark: #28283d;
@@ -71,6 +72,8 @@ const globalStyles = css`
 
     --bp-mobile: 375px;
     --bp-desktop: 1440px;
+
+    --transition-time: 0.5s;
   }
   #root {
     font-family: var(--ff-red-hat);

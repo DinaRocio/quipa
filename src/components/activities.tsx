@@ -43,7 +43,7 @@ export const ActivitiesImages = [
 
 export const Activities = () => {
   return (
-    <Section style={{ margin: "40px 0px", padding: "10px" }}>
+    <Section style={{ margin: "40px 0px", padding: "25px" }}>
       <ImageContainer>
         {ActivitiesImages.map(({ imageSrc, alt }, idx) => (
           <ActivityImage
@@ -55,8 +55,8 @@ export const Activities = () => {
         ))}
       </ImageContainer>
       <TitleContainer>
-        <Caption>We built Quipa together</Caption>
-        <Title>Where Language Learning Meets Fun</Title>
+        <Caption>Enjoy Speak Learn</Caption>
+        <Title> Where Language Learning Meets Fun</Title>
         <Description>
           Weekly conversation sessions in English and other languages, grammar
           and pronunciation workshops, cultural events, language games and more!

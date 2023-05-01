@@ -8,8 +8,6 @@ export const ResponsiveFooter = styled(Flex)`
     hsla(192, 37%, 48%, 0.9)
   );
   background-image: url("https://res.cloudinary.com/circlesulfisoxazole/image/upload/v1682842276/5_1_1_ohagaq.png");
-  /* background-image: url(" https://res.cloudinary.com/circlesulfisoxazole/image/upload/v1682833369/todes_ekpymm.png"); */
-
   background-position: center;
   background-size: cover;
   color: white;
@@ -27,12 +25,7 @@ export const Overlay = styled(Flex)`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    51,
-    148,
-    255,
-    0.5
-  ); /* Replace with your desired transparent color */
+  background-color: rgba(51, 148, 255, 0.5);
   opacity: 3;
 `;
 

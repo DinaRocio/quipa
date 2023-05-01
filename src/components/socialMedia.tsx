@@ -34,7 +34,7 @@ export const socialNetwork = [
   },
   {
     name: tiktok,
-    svg: "https://www.instagram.com/diniwirocio/?hl=es",
+    svg: "https://www.tiktok.com/@qhipa.slc",
     alt: "tiktok logo",
   },
 ];

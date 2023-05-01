@@ -27,12 +27,7 @@ export const Overlay = styled(Flex)`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    51,
-    148,
-    255,
-    0.5
-  ); /* Replace with your desired transparent color */
+  background-color: rgba(51, 148, 255, 0.5);
   opacity: 3;
 `;
 
