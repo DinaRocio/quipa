@@ -7,7 +7,7 @@ export const faqQuestions = [
   {
     title: "What languages can I learn with Quipa Language Club?",
     answer:
-      "Currently, we are practicing English 🇺🇸, French 🇫🇷 and Quechua 🇵🇪. We are working on adding more languages soon.",
+      "Currently, we practice different languages, depending on the one you are more familiar with or the one you are interested in. As English 🇺🇸 being the most demanding language, we mostly focus on it, as well as on French 🇫🇷, German 🇩🇪, Spanish 🇪🇸 and Quechua 🇵🇪. We are working on adding more languages soon. ",
   },
   {
     title: "How much does it cost to join Quipa Language Club?",

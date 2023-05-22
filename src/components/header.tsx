@@ -45,8 +45,8 @@ export const Header = () => {
         <TagContainer>
           <Tagline>Unlock your Language Potential</Tagline>
           <Description>
-            Quipa, a vibrant community based in Cajamarca 🇵🇪, dedicated to
-            helping you enhance your language skills 🧠 while having fun and
+            Quipa, a social learning community based in Cajamarca 🇵🇪, dedicated
+            to help people enhance their language skills 🧠 while having fun and
             making friends 🤩.
           </Description>
           <ButtonContainer>
@@ -63,7 +63,7 @@ export const Header = () => {
                 style={{ marginLeft: "2px" }}
               />
             </GetStartedButton>
-            <WhatIsItButton href="/#faq">FAQ's 🙋‍♀️</WhatIsItButton>
+            <WhatIsItButton href="/#faq">FAQ&apos;s🙋‍♀️</WhatIsItButton>
           </ButtonContainer>
         </TagContainer>
         <PeopleMobileImage>

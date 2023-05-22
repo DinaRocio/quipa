@@ -79,9 +79,9 @@ export const MeetTheTeam = () => {
     <Section style={{ padding: 20 }} id="team">
       <Title>Meet the Team</Title>
       <Description>
-        Our team consists of passionate professionals and dedicated volunteers
-        who work together to provide you with an exceptional language learning
-        experience.
+        Our team is made up of of passionate professionals and dedicated
+        volunteers who work together to provide you with an exceptional language
+        learning experience.
       </Description>
       <Container>
         {members.map((member, idx) => (
