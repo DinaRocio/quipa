@@ -1,11 +1,23 @@
-import { HeartHandshake } from "lucide-react";
+import { Heart, HeartHandshake } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
 import { useContent } from "@/content";
 import { ICON_STROKE_WIDTH } from "@/lib/icons";
+import { Highlight } from "@/components/highlight";
 import { Page } from "@/ui/nav";
-import { ContactLine, FooterLabel, FooterSection, FooterTag, SocialPill, SocialRow } from "@/ui/footer";
+import {
+  ContactLine,
+  CreditBar,
+  CreditLink,
+  FooterLabel,
+  FooterSection,
+  FooterTag,
+  SocialPill,
+  SocialRow,
+} from "@/ui/footer";
+
+const PORTFOLIO_URL = "https://dinarocio.com/";
 
 const LOGO_URL = "/images/brand/logo.png";
 
@@ -32,7 +44,8 @@ export const Footer = () => {
             />
           </div>
           <FooterTag>
-            {content.footer.tagline} <HeartHandshake size={16} strokeWidth={ICON_STROKE_WIDTH} />
+            <Highlight text={content.footer.tagline} phrase={content.footer.taglineHighlight} />{" "}
+            <HeartHandshake size={16} strokeWidth={ICON_STROKE_WIDTH} />
           </FooterTag>
         </div>
         <div>
@@ -51,6 +64,12 @@ export const Footer = () => {
           <ContactLine>Cajamarca, Perú 🇵🇪</ContactLine>
         </div>
       </FooterSection>
+      <CreditBar>
+        Developed with <Heart size={12} strokeWidth={ICON_STROKE_WIDTH} fill="currentColor" /> by{" "}
+        <CreditLink href={PORTFOLIO_URL} target="_blank" rel="noopener noreferrer">
+          @dinarocio
+        </CreditLink>
+      </CreditBar>
     </Page>
   );
 };

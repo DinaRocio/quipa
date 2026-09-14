@@ -19,6 +19,7 @@ export const en: SiteContent = {
     h1a: "Learn languages",
     h1b: "by talking to people",
     sub: "At Qhipa, we believe the best way to learn a language is to use it. Come talk, laugh, meet people and discover new ways of seeing the world.",
+    subHighlight: "the best way to learn a language is to use it",
     membersWord: "people in the community",
     membersSub: "Cajamarca's biggest language community.",
     membersSubHighlight: "biggest",
@@ -33,6 +34,7 @@ export const en: SiteContent = {
     kicker: "This keeps growing…",
     title: "What's coming",
     description: "Language-learning resources put together by the whole Qhipa community.",
+    descriptionHighlight: "put together by the whole Qhipa community",
     items: [
       {
         title: "Learn better",
@@ -72,6 +74,7 @@ export const en: SiteContent = {
     title: "This is what learning together looks like",
     description:
       "Conversations, games, karaoke, cultural nights and all those little moments that probably wouldn't have happened without a language bringing people together.",
+    descriptionHighlight: "karaoke",
     filters: {
       all: "All",
       conversation: "Conversation",
@@ -119,6 +122,7 @@ export const en: SiteContent = {
     aside: {
       title: "Still have a question?",
       body: "Send us a message. A real person will answer — not a bot. Promise :)",
+      bodyHighlight: "not a bot",
       cta: "Message us",
       whatsappMessage: "Hi Qhipa! 👋 I was looking through the website and still have a question: ",
     },
@@ -127,6 +131,7 @@ export const en: SiteContent = {
     title: "The people behind Qhipa",
     description:
       "We're people who love languages, meeting new people and creating spaces where you can speak without being afraid of making mistakes.",
+    descriptionHighlight: "without being afraid of making mistakes",
     roles: ["Co-founder & Coach", "Co-founder", "Social & Community"],
     cta: "Message them",
     whatsappMessageTemplate:
@@ -134,6 +139,7 @@ export const en: SiteContent = {
   },
   footer: {
     tagline: "A community to speak languages, meet people and discover the world. Free and always open.",
+    taglineHighlight: "Free and always open",
     follow: "Follow us",
     write: "Message us",
   },

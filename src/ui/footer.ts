@@ -57,3 +57,25 @@ export const ContactLine = styled.p`
     margin-bottom: 0;
   }
 `;
+
+export const CreditBar = styled.div`
+  border-top: 1px solid #e3e4e9;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--clr-faint);
+`;
+
+export const CreditLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--clr-navy);
+  font-weight: 600;
+  &:hover {
+    color: var(--clr-blue);
+  }
+`;

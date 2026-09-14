@@ -5,6 +5,7 @@ import React from "react";
 import { useContent } from "@/content";
 import { ICON_STROKE_WIDTH } from "@/lib/icons";
 import { waLink } from "@/lib/whatsapp";
+import { Highlight } from "@/components/highlight";
 import { Page } from "@/ui/nav";
 import {
   Avatar,
@@ -57,7 +58,9 @@ export const MeetTheTeam = () => {
     <TeamSection id="equipo">
       <Page>
         <TeamTitle>{content.team.title}</TeamTitle>
-        <TeamSub>{content.team.description}</TeamSub>
+        <TeamSub>
+          <Highlight text={content.team.description} phrase={content.team.descriptionHighlight} />
+        </TeamSub>
         <TeamGrid>
           {members.map((member, idx) => {
             const role = content.team.roles[idx];

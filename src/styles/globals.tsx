@@ -36,6 +36,8 @@ const globalStyles = css`
     --clr-green: #25d366;
     --clr-green-hover: #1fb857;
     --clr-navy: #1b2a4e;
+    --clr-highlight: #f2e30c;
+    --clr-highlight-soft: rgba(242, 227, 12, 0.55);
     --clr-muted: #5b6374;
     --clr-faint: #9aa2b3;
     --clr-border: #e9eaee;

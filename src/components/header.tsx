@@ -156,7 +156,9 @@ export const Header = () => {
           <H1>
             {content.hero.h1a} <span>{content.hero.h1b}</span>
           </H1>
-          <Sub>{content.hero.sub}</Sub>
+          <Sub>
+            <Highlight text={content.hero.sub} phrase={content.hero.subHighlight} />
+          </Sub>
 
           <CtaRow>
             <CtaJoin href={waLink(content.hero.whatsappMessageHero)} target="_blank" rel="noopener noreferrer">

@@ -19,6 +19,7 @@ export const es: SiteContent = {
     h1a: "Aprende idiomas",
     h1b: "hablando",
     sub: "En Qhipa creemos que un idioma se aprende usándolo. Ven a conversar, reírte, conocer gente y descubrir otras formas de ver el mundo.",
+    subHighlight: "un idioma se aprende usándolo",
     membersWord: "personas en la comunidad",
     membersSub: "La comunidad de idiomas más grande de Cajamarca.",
     membersSubHighlight: "más grande",
@@ -33,6 +34,7 @@ export const es: SiteContent = {
     kicker: "De la comunidad para la comunidad…",
     title: "Sigue aprendiendo por tu cuenta",
     description: "Recursos para aprender idiomas, armados entre toda la comunidad Qhipa.",
+    descriptionHighlight: "armados entre toda la comunidad Qhipa",
     items: [
       {
         title: "Aprende mejor",
@@ -67,10 +69,11 @@ export const es: SiteContent = {
     title: "Así se ve aprender juntos",
     description:
       "Conversaciones, juegos, karaokes, after-qhipas y un montón de momentos que probablemente no habrían pasado sin un idioma de por medio.",
+    descriptionHighlight: "after-qhipas",
     filters: {
       all: "Todos",
       conversation: "Conversación",
-      integration: "Integración",
+      integration: "Convivios",
     },
     photoCaption: {
       conversation: "Una noche cualquiera hablando en Qhipa",
@@ -113,7 +116,8 @@ export const es: SiteContent = {
     ],
     aside: {
       title: "¿Todavía tienes una duda?",
-      body: "Escríbenos. Te respondemos nosotros mismos, no un bot. Prometido :)",
+      body: "Escríbenos. Te respondemos nosotros mismos ",
+      bodyHighlight: "no un bot",
       cta: "Escríbenos",
       whatsappMessage: "¡Hola Qhipa! 👋 Estuve viendo la página y todavía tengo una duda: ",
     },
@@ -122,6 +126,7 @@ export const es: SiteContent = {
     title: "El Team detrás de Qhipa",
     description:
       "Nos encantan los idiomas, conocer gente y crear espacios donde puedas hablar sin miedo a equivocarte.",
+    descriptionHighlight: "sin miedo a equivocarte",
     roles: ["Co-fundador y coach", "Co-fundador", "Redes y comunidad"],
     cta: "Escríbele",
     whatsappMessageTemplate:
@@ -129,6 +134,7 @@ export const es: SiteContent = {
   },
   footer: {
     tagline: "Una comunidad para hablar idiomas, conocer gente y descubrir el mundo. Gratis y siempre abierta.",
+    taglineHighlight: "Gratis y siempre abierta",
     follow: "Síguenos",
     write: "Escríbenos",
   },

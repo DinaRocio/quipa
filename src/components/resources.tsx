@@ -4,6 +4,7 @@ import React from "react";
 import { useContent } from "@/content";
 import { ICON_STROKE_WIDTH } from "@/lib/icons";
 import { waLink } from "@/lib/whatsapp";
+import { Highlight } from "@/components/highlight";
 import { Note, SectionNote } from "@/ui/annotations";
 import { Page } from "@/ui/nav";
 import { H2, Kicker, SectionSub } from "@/ui/steps";
@@ -35,7 +36,9 @@ export const Resources = () => {
       <Page>
         <Kicker>{content.resources.kicker}</Kicker>
         <H2>{content.resources.title}</H2>
-        <SectionSub>{content.resources.description}</SectionSub>
+        <SectionSub>
+          <Highlight text={content.resources.description} phrase={content.resources.descriptionHighlight} />
+        </SectionSub>
         <SectionNote>
           <ArrowDownRight size={22} strokeWidth={ICON_STROKE_WIDTH} color="var(--clr-coral)" />
           <Note rotate={-2} color="var(--clr-coral)">

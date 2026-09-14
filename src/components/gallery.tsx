@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useContent } from "@/content";
 import { ICON_STROKE_WIDTH } from "@/lib/icons";
 import { waLink } from "@/lib/whatsapp";
+import { Highlight } from "@/components/highlight";
 import { H2, Kicker } from "@/ui/steps";
 import { Page } from "@/ui/nav";
 import {
@@ -34,7 +35,7 @@ import {
 } from "@/ui/gallery";
 
 const DESKTOP_PAGE_SIZE = 9;
-const MOBILE_PAGE_SIZE = 6;
+const MOBILE_PAGE_SIZE = 4;
 const MOBILE_QUERY = "(max-width: 700px)";
 
 export type GalleryCategory = "conversation" | "integration";
@@ -51,7 +52,7 @@ interface GalleryProps {
 
 export const Gallery = ({ photos }: GalleryProps) => {
   const content = useContent();
-  const [filter, setFilter] = useState<Category>("all");
+  const [filter, setFilter] = useState<Category>("integration");
   const [openIdx, setOpenIdx] = useState<number | null>(null);
   const [pageSize, setPageSize] = useState(DESKTOP_PAGE_SIZE);
   const [visibleCount, setVisibleCount] = useState(DESKTOP_PAGE_SIZE);
@@ -91,7 +92,9 @@ export const Gallery = ({ photos }: GalleryProps) => {
           <GalleryHeading>
             <Kicker>{content.gallery.kicker}</Kicker>
             <H2>{content.gallery.title}</H2>
-            <p>{content.gallery.description}</p>
+            <p>
+              <Highlight text={content.gallery.description} phrase={content.gallery.descriptionHighlight} />
+            </p>
           </GalleryHeading>
           <FilterRow>
             {categories.map((cat) => {

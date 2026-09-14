@@ -27,6 +27,7 @@ export interface SiteContent {
     h1a: string;
     h1b: string;
     sub: string;
+    subHighlight: string;
     membersWord: string;
     membersSub: string;
     membersSubHighlight: string;
@@ -40,6 +41,7 @@ export interface SiteContent {
     kicker: string;
     title: string;
     description: string;
+    descriptionHighlight: string;
     items: ResourceItem[];
     contribute: {
       title: string;
@@ -52,6 +54,7 @@ export interface SiteContent {
     kicker: string;
     title: string;
     description: string;
+    descriptionHighlight: string;
     filters: {
       all: string;
       conversation: string;
@@ -73,6 +76,7 @@ export interface SiteContent {
     aside: {
       title: string;
       body: string;
+      bodyHighlight: string;
       cta: string;
       whatsappMessage: string;
     };
@@ -80,12 +84,14 @@ export interface SiteContent {
   team: {
     title: string;
     description: string;
+    descriptionHighlight: string;
     roles: string[];
     cta: string;
     whatsappMessageTemplate: string;
   };
   footer: {
     tagline: string;
+    taglineHighlight: string;
     follow: string;
     write: string;
   };

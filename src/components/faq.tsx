@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useContent } from "@/content";
 import { ICON_STROKE_WIDTH } from "@/lib/icons";
 import { waLink } from "@/lib/whatsapp";
+import { Highlight } from "@/components/highlight";
 import { Page } from "@/ui/nav";
 import {
   AccordionHeader,
@@ -68,7 +69,8 @@ export const Faq = () => {
             </AsideEmoji>
             <AsideTitle>{content.faq.aside.title}</AsideTitle>
             <AsideBody>
-              {content.faq.aside.body} <HeartHandshake size={16} strokeWidth={ICON_STROKE_WIDTH} />
+              <Highlight text={content.faq.aside.body} phrase={content.faq.aside.bodyHighlight} />{" "}
+              <HeartHandshake size={16} strokeWidth={ICON_STROKE_WIDTH} />
             </AsideBody>
             <AsideCta href={waLink(content.faq.aside.whatsappMessage)} target="_blank" rel="noopener noreferrer">
               {content.faq.aside.cta} <MessageCircle size={18} strokeWidth={ICON_STROKE_WIDTH} />

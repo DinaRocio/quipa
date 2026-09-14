@@ -26,8 +26,8 @@ export const ResourcesGrid = styled.div`
 
   @media (max-width: 720px) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     padding: 4px 0 16px;
     margin-bottom: 16px;
   }
