@@ -1,57 +1,82 @@
-import Image from "next/image";
+import { CircleHelp, HeartHandshake, MessageCircle } from "lucide-react";
 import React, { useState } from "react";
-import SocialMedia from "./socialMedia";
-import {
-  AccordeonContainerItem,
-  Answer,
-  ArrowButton,
-  AccordeonSection,
-  HeaderContent,
-  Question,
-  FaqSection,
-  Title,
-  AnswerContainer,
-  Container,
-} from "@/ui/faq";
-import arrow from "./../images/arrow-bottom.svg";
-import faqIcon from "./../images/faq.svg";
-import { faqQuestions } from "@/data/faqQuestions";
 
-interface AccordeonItemProps {
+import { useContent } from "@/content";
+import { ICON_STROKE_WIDTH } from "@/lib/icons";
+import { waLink } from "@/lib/whatsapp";
+import { Page } from "@/ui/nav";
+import {
+  AccordionHeader,
+  AccordionItem,
+  AnswerText,
+  AsideBody,
+  AsideCard,
+  AsideCta,
+  AsideEmoji,
+  AsidePhone,
+  AsideTitle,
+  Chevron,
+  FaqGrid,
+  FaqSection,
+  FaqTitle,
+  QuestionsColumn,
+  QuestionText,
+} from "@/ui/faq";
+
+interface AccordionItemProps {
   title: string;
   answer: string;
+  isOpen: boolean;
+  onToggle: () => void;
 }
 
-const AccordeonItem = ({ title, answer }: AccordeonItemProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const FaqEntry = ({ title, answer, isOpen, onToggle }: AccordionItemProps) => {
   return (
-    <AccordeonContainerItem>
-      <HeaderContent onClick={() => setIsOpen(!isOpen)}>
-        <Question>{title}</Question>
-        <ArrowButton onClick={() => setIsOpen(!isOpen)}>
-          <Image src={arrow} alt="arrow" />
-        </ArrowButton>
-      </HeaderContent>
-      <AnswerContainer open={isOpen}>
-        <Answer>{answer}</Answer>
-      </AnswerContainer>
-    </AccordeonContainerItem>
+    <AccordionItem>
+      <AccordionHeader onClick={onToggle}>
+        <QuestionText>{title}</QuestionText>
+        <Chevron open={isOpen}>⌄</Chevron>
+      </AccordionHeader>
+      {isOpen && <AnswerText>{answer}</AnswerText>}
+    </AccordionItem>
   );
 };
 
 export const Faq = () => {
+  const content = useContent();
+  const [openIdx, setOpenIdx] = useState<number | null>(0);
+
   return (
     <FaqSection id="faq">
-      <Image src={faqIcon} alt="girl asking questions" width={300} />
-      <Container>
-        <Title>FAQ</Title>
-        <AccordeonSection>
-          {faqQuestions.map(({ title, answer }, idx) => (
-            <AccordeonItem key={idx} title={title} answer={answer} />
-          ))}
-        </AccordeonSection>
-      </Container>
+      <Page>
+        <FaqTitle>{content.faq.title}</FaqTitle>
+        <FaqGrid>
+          <QuestionsColumn>
+            {content.faq.questions.map(({ title, answer }, idx) => (
+              <FaqEntry
+                key={idx}
+                title={title}
+                answer={answer}
+                isOpen={openIdx === idx}
+                onToggle={() => setOpenIdx(openIdx === idx ? null : idx)}
+              />
+            ))}
+          </QuestionsColumn>
+          <AsideCard>
+            <AsideEmoji>
+              <CircleHelp size={30} strokeWidth={ICON_STROKE_WIDTH} />
+            </AsideEmoji>
+            <AsideTitle>{content.faq.aside.title}</AsideTitle>
+            <AsideBody>
+              {content.faq.aside.body} <HeartHandshake size={16} strokeWidth={ICON_STROKE_WIDTH} />
+            </AsideBody>
+            <AsideCta href={waLink(content.faq.aside.whatsappMessage)} target="_blank" rel="noopener noreferrer">
+              {content.faq.aside.cta} <MessageCircle size={18} strokeWidth={ICON_STROKE_WIDTH} />
+            </AsideCta>
+            <AsidePhone>+51 976 041 753 · Elias Cachi, cofounder</AsidePhone>
+          </AsideCard>
+        </FaqGrid>
+      </Page>
     </FaqSection>
   );
 };

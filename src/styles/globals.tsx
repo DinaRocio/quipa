@@ -2,86 +2,83 @@
 import { css, Global } from "@emotion/react";
 
 const globalStyles = css`
-  /* Import the Red Hat Display font */
-  @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap");
-
-  /* @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap"); */
-
-  /* Add your global styles here */
   body {
-    background: #fafafa;
-    color: #87879d;
-    line-height: 1;
-    font-family: "Red Hat Display", sans-serif;
-    font-weight: 500;
-    font-size: 1.125rem;
-    line-height: 1.625rem;
+    margin: 0;
+    background: #f7f7f8;
+    color: #1b2a4e;
+    font-family: "Poppins", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
     overflow-x: hidden;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-    list-style: none;
-  }
-
-  h1 {
-    color: #28283d;
-    font-size: 4rem;
-    font-weight: 600;
-    line-height: 1.1;
-    text-align: center;
   }
 
   * {
     box-sizing: border-box;
   }
 
+  a {
+    color: #0a6ee0;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #f2685c;
+  }
+
+  button {
+    font-family: inherit;
+  }
+
   :root {
-    /* Colors */
+    --clr-blue: #0a6ee0;
+    --clr-blue-hover: #0959b4;
+    --clr-coral: #f2685c;
+    --clr-coral-hover: #dd5145;
+    --clr-green: #25d366;
+    --clr-green-hover: #1fb857;
+    --clr-navy: #1b2a4e;
+    --clr-muted: #5b6374;
+    --clr-faint: #9aa2b3;
+    --clr-border: #e9eaee;
+    --clr-border-soft: #e6e7ec;
+    --clr-surface: #fff;
+    --clr-bg: #f7f7f8;
+    --clr-placeholder: #eceef2;
 
-    /* Primary */
-    --clr-melon: #f46454;
-    --clr-light-blue: #047ce4;
-    --clr-dark-blue: #04448b;
-    --clr-green: #04db09;
-    --clr-yellow: #eee604;
-
-    /* Hover */
-    --hover-melon: #f7887a;
-    --hover-light-blue: #3394ff;
-    --hover-dark-blue: #2657a7;
-    --hover-green: #15e31f;
-    --hover-yellow: #ffff26;
-
-    --light-grayish-blue: hsl(240, 5%, 91%);
-    /* Typography */
-
-    --clr-gray-dark: #28283d;
-
-    /* font family */
-    --ff-red-hat: "Red Hat Display", sans-serif;
-
-    /* font family */
-
-    /* font weight */
-    --fw-light: 300;
-    --fw-regular: 400;
-
-    /* Breakpoints */
+    --font-hand: "Caveat", "Segoe Script", cursive;
 
     --bp-mobile: 375px;
     --bp-desktop: 1440px;
-
     --transition-time: 0.5s;
   }
-  #root {
-    font-family: var(--ff-red-hat);
 
-    line-height: 1.5;
-
-    min-height: 100vh;
-    max-width: 100vw;
+  @keyframes qpulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+    }
+    70% {
+      box-shadow: 0 0 0 9px rgba(37, 211, 102, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+  @keyframes qup {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes qfade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `;
 

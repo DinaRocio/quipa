@@ -1,83 +1,123 @@
 import styled from "@emotion/styled";
-import { Flex, Section } from "./heading";
 
-interface AnswerContainerProps {
-  open: boolean;
-}
+export const FaqSection = styled.section`
+  padding: clamp(40px, 6vw, 70px) 0;
+  border-top: 1px solid var(--clr-border-soft);
+`;
 
-export const FaqSection = styled(Section)`
+export const FaqTitle = styled.h2`
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -1.1px;
+  font-weight: 700;
+  margin: 0 0 30px;
+`;
+
+export const FaqGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+`;
+
+export const QuestionsColumn = styled.div`
+  display: grid;
+  gap: 10px;
+`;
+
+export const AccordionItem = styled.div`
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: 16px;
+  overflow: hidden;
+`;
+
+export const AccordionHeader = styled.button`
   display: flex;
-  flex-direction: row;
   align-items: center;
-  @media (max-width: 1080px) {
-    flex-direction: column;
-  }
-`;
-
-export const Container = styled(Flex)`
-  flex-direction: column;
-  align-items: center;
-`;
-
-export const AccordeonSection = styled.ul`
+  gap: 14px;
   width: 100%;
-  height: 100%;
-  align-items: center;
-  padding: 0px 25px;
-`;
-
-export const AccordeonContainerItem = styled.li`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 525px;
-  height: auto;
-  border-bottom: 1px solid var(--light-grayish-blue);
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`;
-
-export const Title = styled.h2`
-  font-size: 18px;
-  font-weight: 900;
-  color: var(--clr-gray-dark);
-  letter-spacing: 2px;
-  margin: 20px 0px 0px 0px;
-`;
-
-export const Question = styled.h3`
-  font-size: 16px;
-  font-weight: 900;
-  color: var(--clr-gray-dark);
-  margin: 0px;
-  line-height: 1.4em;
-`;
-
-export const AnswerContainer = styled(Flex)<AnswerContainerProps>`
-  // Use props to conditionally apply styles based on the active state
-  display: ${(props) => (props.open ? "flex" : "none")};
-  transition: display 0.5s ease-in-out;
-`;
-export const Answer = styled.h4`
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0px;
-  line-height: 1.6em;
-`;
-
-export const HeaderContent = styled(Flex)`
-  justify-content: space-between;
-  width: 100%;
-  padding: 13px 0px;
-`;
-
-export const BaseButton = styled.button`
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
   text-align: left;
+  background: none;
+  border: 0;
+  padding: 18px 20px;
+  cursor: pointer;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--clr-navy);
+  line-height: 1.4;
 `;
 
-export const ArrowButton = styled(BaseButton)``;
+export const QuestionText = styled.span`
+  flex: 1;
+`;
+
+export const Chevron = styled.span<{ open: boolean }>`
+  flex: none;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--clr-blue);
+  transition: transform 0.18s ease;
+  transform: rotate(${({ open }) => (open ? "180deg" : "0deg")});
+`;
+
+export const AnswerText = styled.p`
+  margin: 0;
+  padding: 0 20px 20px;
+  font-size: 14.5px;
+  line-height: 1.68;
+  color: var(--clr-muted);
+  text-wrap: pretty;
+`;
+
+export const AsideCard = styled.div`
+  background: var(--clr-navy);
+  border-radius: 22px;
+  padding: 30px 28px;
+  color: #fff;
+`;
+
+export const AsideEmoji = styled.div`
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 16px;
+`;
+
+export const AsideTitle = styled.h3`
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin: 0 0 10px;
+  line-height: 1.25;
+`;
+
+export const AsideBody = styled.p`
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #c3cade;
+  margin: 0 0 22px;
+`;
+
+export const AsideCta = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: var(--clr-green);
+  color: #fff;
+  font-size: 15.5px;
+  font-weight: 600;
+  padding: 14px 22px;
+  border-radius: 999px;
+  &:hover {
+    background: var(--clr-green-hover);
+    color: #fff;
+  }
+`;
+
+export const AsidePhone = styled.p`
+  margin: 18px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #8e99b6;
+`;

@@ -1,93 +1,93 @@
+import { MessageCircle } from "lucide-react";
 import Image from "next/image";
-import React, { useState } from "react";
-import SocialMedia from "./socialMedia";
+import React from "react";
 
-import arrow from "./../images/arrow-bottom.svg";
-import faqIcon from "./../images/faq.svg";
-import { faqQuestions } from "@/data/faqQuestions";
-import { Flex, Section } from "@/ui/heading";
+import { useContent } from "@/content";
+import { ICON_STROKE_WIDTH } from "@/lib/icons";
+import { waLink } from "@/lib/whatsapp";
+import { Page } from "@/ui/nav";
 import {
-  Caption,
-  Container,
-  Description,
-  MemberImage,
-  MemberItem,
-  Name,
-  Role,
-  Title,
+  Avatar,
+  MemberCard,
+  MemberCta,
+  MemberHandle,
+  MemberName,
+  MemberRole,
+  TeamGrid,
+  TeamSection,
+  TeamSub,
+  TeamTitle,
 } from "@/ui/team";
 
-interface MemberProps {
+interface MemberData {
   avatar: string;
   name: string;
-  role: string;
-  username: string;
-  alt: string;
-  bgColor: string;
+  handle: string;
+  ring: string;
 }
 
-export const members = [
+export const members: MemberData[] = [
   {
     avatar:
       "https://res.cloudinary.com/circlesulfisoxazole/image/upload/v1682925709/Elias-removebg-preview_zw3j56.png",
     name: "Elias Cachi",
-    role: "Co-founder & Coach",
-    username: "@eliasthecoach",
-    alt: "member",
-    bgColor: "#047ce4",
+    handle: "@eliasthecoach",
+    ring: "#0a6ee0",
   },
   {
     avatar:
       "https://res.cloudinary.com/circlesulfisoxazole/image/upload/v1682925709/cristian_quipa-removebg-preview_wjhdtn.png",
     name: "Cristhian Carrasco",
-    role: "Co-founder",
-    username: "@cristhianbill12",
-    alt: "member ",
-    bgColor: "#f46454",
+    handle: "@cristhianbill12",
+    ring: "#f2685c",
   },
   {
     avatar:
       "https://res.cloudinary.com/circlesulfisoxazole/image/upload/v1682925709/1639154262396-removebg-preview_mkrpyj.png",
     name: "Dina Villanueva",
-    role: "Network",
-    username: "@dinarocio",
-    alt: "member ",
-    bgColor: "#04db09",
+    handle: "@dinarocio",
+    ring: "#25D366",
   },
 ];
 
-const Member = ({
-  avatar,
-  name,
-  role,
-  username,
-  bgColor,
-  alt,
-}: MemberProps) => {
-  return (
-    <MemberItem>
-      <MemberImage bgImage={avatar} alt={alt} bgColor={bgColor} />
-      <Name>{name}</Name>
-      <Role>{role}</Role>
-      <Caption>{username}</Caption>
-    </MemberItem>
-  );
-};
-
 export const MeetTheTeam = () => {
+  const content = useContent();
+
   return (
-    <Section style={{ padding: 20 }} id="team">
-      <Title>Meet the Team</Title>
-      <Description>
-        Our team is made up of of passionate professionals and dedicated
-        volunteers who work together to provide you with an exceptional language
-        learning experience.
-      </Description>
-      <Container>
-        {members.map((member, idx) => (
-          <Member key={idx} {...member} />
-        ))}
-      </Container>
-    </Section>
+    <TeamSection id="equipo">
+      <Page>
+        <TeamTitle>{content.team.title}</TeamTitle>
+        <TeamSub>{content.team.description}</TeamSub>
+        <TeamGrid>
+          {members.map((member, idx) => {
+            const role = content.team.roles[idx];
+            const whatsappMessage = content.team.whatsappMessageTemplate.replace(
+              "{name}",
+              member.name.split(" ")[0]
+            );
+            return (
+              <MemberCard key={member.handle}>
+                <Avatar ring={member.ring}>
+                  <Image
+                    src={member.avatar}
+                    alt={`Foto de ${member.name}`}
+                    width={132}
+                    height={132}
+                  />
+                </Avatar>
+                <div>
+                  <MemberName>{member.name}</MemberName>
+                  <MemberRole>{role}</MemberRole>
+                  <MemberHandle>{member.handle}</MemberHandle>
+                </div>
+                <MemberCta href={waLink(whatsappMessage)} target="_blank" rel="noopener noreferrer">
+                  {content.team.cta} <MessageCircle size={18} strokeWidth={ICON_STROKE_WIDTH} />
+                </MemberCta>
+              </MemberCard>
+            );
+          })}
+        </TeamGrid>
+      </Page>
+    </TeamSection>
   );
 };
