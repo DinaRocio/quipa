@@ -195,8 +195,8 @@ export const GrowthNote = styled.div`
   line-height: 1;
 
   svg {
-    transform: scaleX(-1) rotate(-8deg);
-    margin-top: 10px;
+    flex: none;
+    transform: rotate(-4deg);
   }
 
   @media (max-width: 767px) {

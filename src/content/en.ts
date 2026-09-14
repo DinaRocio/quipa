@@ -7,7 +7,7 @@ export const en: SiteContent = {
       "Qhipa is a language community in Cajamarca where we learn by speaking, laughing, meeting people and discovering new cultures.",
   },
   nav: {
-    how: "How it works",
+    resources: "Resources",
     gallery: "Gallery",
     faq: "FAQ",
     team: "Team",
@@ -29,29 +29,43 @@ export const en: SiteContent = {
     whatsappMessageHero:
       "Hi Qhipa! 👋 I found your website and I'd love to join. When's the next session?",
   },
-  steps: {
-    kicker: "Speak · Connect · Learn",
-    title: "You learn a language by speaking it",
-    description:
-      "We get together to talk, play, laugh and meet people. Because once you stop worrying about learning and start using the language, things start to click.",
+  resources: {
+    kicker: "This keeps growing…",
+    title: "What's coming",
+    description: "Language-learning resources put together by the whole Qhipa community.",
     items: [
       {
-        title: "Come have a chat",
-        body: "We meet every week in Cajamarca and talk in level-based groups. You don't have to speak perfectly. Just sit down and start.",
+        title: "Learn better",
+        body: "Tips, tools and materials shared during sessions.",
+        href: "https://drive.google.com/file/d/1OBJhi8DU4lKakE_uRjaDMIhwwTaTPD8B/view?usp=sharing",
+      },
+      // {
+      //   title: "After QHIPA",
+      //   body: "Outings and plans to keep practicing outside of sessions.",
+      //   href: "#",
+      // },
+      {
+        title: "Scholarships & opportunities",
+        body: "Scholarships, exchanges, open calls and volunteering.",
+        href: "https://drive.google.com/file/d/1h-bPvzoAu_5OaCbgRz-X9X9SyVEjmZLL/view?usp=sharing",
       },
       {
-        title: "Learn by doing",
-        body: "We also run workshops, games and activities so grammar, pronunciation and new words actually make sense when you use them.",
+        title: "Recommended content",
+        body: "Podcasts, movies, music and newsletters.",
+        href: "https://drive.google.com/file/d/1U_2qgwjpn2uLINek3LHMAPOSDM90gx-R/view?usp=sharing",
       },
       {
-        title: "Meet people",
-        body: "A language is also an excuse to meet people, hear different stories and discover cultures you might never have encountered otherwise.",
-      },
-      {
-        title: "Stay for the community",
-        body: "Come back next week, bring a friend and keep talking. Nobody expects you to be perfect here — we're here to learn together.",
+        title: "Useful tools",
+        body: "Dictionaries, apps and websites to practice.",
+        href: "https://drive.google.com/file/d/1aFUSRKE3eZWGdgG58v9JaYOX1_jHvq3P/view?usp=sharing",
       },
     ],
+    contribute: {
+      title: "Got a resource to share?",
+      body: "A book, a scholarship, a podcast… tell us and we'll add it to the list.",
+      cta: "Message us",
+      whatsappMessage: "Hi Qhipa! 👋 I want to share a resource for learning languages: ",
+    },
   },
   gallery: {
     kicker: "Real people · real moments",
@@ -99,7 +113,7 @@ export const en: SiteContent = {
       {
         title: "How can I contact the Qhipa team?",
         answer:
-          "Message us on WhatsApp at +51 956 295 695 or +51 976 041 753. We're real people, and we'd be happy to help you out.",
+          "Message us on WhatsApp at +51 976 041 753. We're real people, and we'd be happy to help you out.",
       },
     ],
     aside: {
@@ -135,7 +149,7 @@ export const en: SiteContent = {
   notes: {
     headerBadge: "221 and growing",
     headerCta: "Coming?",
-    steps: "Cajamarca speaks 👀",
+    resources: "we're filling this up together ✍️",
     gallery: "Come talk to us",
     team: "People talking to people",
     footer: "See you this week :)",

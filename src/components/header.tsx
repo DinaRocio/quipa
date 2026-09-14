@@ -1,4 +1,4 @@
-import { CircleHelp, Menu, MessageCircle, Sparkles, X } from "lucide-react";
+import { ArrowDownRight, CircleHelp, Menu, MessageCircle, Sparkles, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -8,7 +8,6 @@ import { useContent } from "@/content";
 import { locales } from "@/content";
 import { ICON_STROKE_WIDTH } from "@/lib/icons";
 import { waLink } from "@/lib/whatsapp";
-import { ArrowDoodle } from "@/components/doodles";
 import { Highlight } from "@/components/highlight";
 import {
   HeaderStatPill,
@@ -80,7 +79,7 @@ export const Header = () => {
           <Image src={LOGO_URL} alt="Qhipa — club social de idiomas en Cajamarca" width={115} height={90} style={{ height: 42, width: "auto" }} priority />
         </LogoLink>
         <NavLinks>
-          <a href="#como-funciona">{content.nav.how}</a>
+          <a href="#recursos">{content.nav.resources}</a>
           <a href="#galeria">{content.nav.gallery}</a>
           <a href="#faq">{content.nav.faq}</a>
           <a href="#equipo">{content.nav.team}</a>
@@ -127,8 +126,8 @@ export const Header = () => {
           <MobileMenuCta href={waLink(content.hero.whatsappMessageNav)} target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
             {content.nav.cta} <MessageCircle size={18} strokeWidth={ICON_STROKE_WIDTH} />
           </MobileMenuCta>
-          <a href="#como-funciona" onClick={closeMenu}>
-            {content.nav.how}
+          <a href="#recursos" onClick={closeMenu}>
+            {content.nav.resources}
           </a>
           <a href="#galeria" onClick={closeMenu}>
             {content.nav.gallery}
@@ -176,7 +175,7 @@ export const Header = () => {
               </StatBadgeNumberWrap>
               <StatBadgeText>
                 <strong>
-                  {MEMBER_COUNT} {content.hero.membersWord}
+                  {content.hero.membersWord}
                 </strong>
                 <StatBadgeSub>
                   <Highlight text={content.hero.membersSub} phrase={content.hero.membersSubHighlight} />
@@ -184,7 +183,7 @@ export const Header = () => {
               </StatBadgeText>
             </StatBadge>
             <GrowthNote>
-              <ArrowDoodle width={40} height={30} />
+              <ArrowDownRight size={28} strokeWidth={ICON_STROKE_WIDTH} />
               {content.hero.growthNote}
             </GrowthNote>
           </StatBadgeRow>

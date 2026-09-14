@@ -5,7 +5,7 @@ import path from "path";
 import { useRouter } from "next/router";
 
 import { Header } from "@/components/header";
-import { Steps } from "@/components/steps";
+import { Resources } from "@/components/resources";
 import { Gallery, GalleryCategory, GalleryPhoto } from "@/components/gallery";
 import { Footer } from "@/components/footer";
 import { Faq } from "@/components/faq";
@@ -73,7 +73,7 @@ export default function Home({ galleryPhotos }: HomeProps) {
         <title>{content.meta.title}</title>
         <meta name="description" content={content.meta.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
 
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="es" href={`${SITE_URL}/`} />
@@ -97,7 +97,7 @@ export default function Home({ galleryPhotos }: HomeProps) {
       </Head>
       <main>
         <Header />
-        <Steps />
+        <Resources />
         <Gallery photos={galleryPhotos} />
         <Faq />
         <MeetTheTeam />

@@ -16,7 +16,7 @@ export const NoteRow = styled.div<{ justify?: string }>`
   align-items: center;
   gap: 4px;
   flex-wrap: wrap;
-  justify-content: ${({ justify }) => justify ?? "flex-start"};
+  justify-content: ${({ justify }) => justify ?? "flex-end"};
 
   svg {
     flex: none;

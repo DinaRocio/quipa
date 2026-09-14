@@ -7,7 +7,7 @@ export const es: SiteContent = {
       "Qhipa es una comunidad de idiomas en Cajamarca donde aprendemos hablando, riéndonos, conociendo gente y descubriendo nuevas culturas.",
   },
   nav: {
-    how: "Cómo funciona",
+    resources: "Recursos",
     gallery: "Galería",
     faq: "FAQ",
     team: "Equipo",
@@ -17,7 +17,7 @@ export const es: SiteContent = {
   },
   hero: {
     h1a: "Aprende idiomas",
-    h1b: "hablando con gente",
+    h1b: "hablando",
     sub: "En Qhipa creemos que un idioma se aprende usándolo. Ven a conversar, reírte, conocer gente y descubrir otras formas de ver el mundo.",
     membersWord: "personas en la comunidad",
     membersSub: "La comunidad de idiomas más grande de Cajamarca.",
@@ -29,35 +29,44 @@ export const es: SiteContent = {
     whatsappMessageHero:
       "¡Hola Qhipa! 👋 Vi la página y quiero conocer Qhipa. ¿Cuándo es la próxima sesión?",
   },
-  steps: {
-    kicker: "Habla · Conoce · Aprende",
-    title: "Un idioma se aprende hablando",
-    description:
-      "Nos juntamos para hablar, jugar, reírnos y conocer gente. Porque cuando dejas de preocuparte por aprender y empiezas a usar el idioma, las cosas empiezan a fluir.",
+  resources: {
+    kicker: "De la comunidad para la comunidad…",
+    title: "Sigue aprendiendo por tu cuenta",
+    description: "Recursos para aprender idiomas, armados entre toda la comunidad Qhipa.",
     items: [
       {
-        title: "Ven a conversar",
-        body: "Nos juntamos cada semana en Cajamarca para hablar en mesas por nivel. No necesitas hablar perfecto. Solo sentarte y empezar.",
+        title: "Aprende mejor",
+        body: "Consejos, herramientas y materiales compartidos en las sesiones.",
+        href: "https://drive.google.com/file/d/1OBJhi8DU4lKakE_uRjaDMIhwwTaTPD8B/view?usp=sharing",
       },
       {
-        title: "Aprende haciendo",
-        body: "También hacemos talleres, juegos y actividades para que la gramática, la pronunciación y las palabras nuevas tengan sentido cuando las usas.",
+        title: "Becas & oportunidades",
+        body: "Becas, intercambios, convocatorias y voluntariados.",
+        href: "https://drive.google.com/file/d/1h-bPvzoAu_5OaCbgRz-X9X9SyVEjmZLL/view?usp=sharing",
       },
       {
-        title: "Conoce gente",
-        body: "Un idioma también es una excusa para conocer personas, escuchar otras historias y descubrir culturas que quizás nunca habrías encontrado de otra forma.",
+        title: "Contenido recomendado",
+        body: "Podcasts, películas, música y newsletters.",
+        href: "https://drive.google.com/file/d/1U_2qgwjpn2uLINek3LHMAPOSDM90gx-R/view?usp=sharing",
       },
       {
-        title: "Quédate por la comunidad",
-        body: "Vuelve la próxima semana, trae a alguien y sigue hablando. Aquí nadie espera que seas perfecto: venimos a aprender juntos.",
+        title: "Herramientas útiles",
+        body: "Diccionarios, apps y páginas para practicar.",
+        href: "https://drive.google.com/file/d/1aFUSRKE3eZWGdgG58v9JaYOX1_jHvq3P/view?usp=sharing",
       },
     ],
+    contribute: {
+      title: "¿Tienes un recurso para compartir?",
+      body: "Un libro, una beca, un podcast… cuéntanos y lo sumamos a la lista.",
+      cta: "Escríbenos",
+      whatsappMessage: "¡Hola Qhipa! 👋 Quiero compartir un recurso para aprender idiomas: ",
+    },
   },
   gallery: {
-    kicker: "Gente real · momentos reales",
+    kicker: "Qhipers · Together",
     title: "Así se ve aprender juntos",
     description:
-      "Conversaciones, juegos, karaokes, noches culturales y un montón de momentos que probablemente no habrían pasado sin un idioma de por medio.",
+      "Conversaciones, juegos, karaokes, after-qhipas y un montón de momentos que probablemente no habrían pasado sin un idioma de por medio.",
     filters: {
       all: "Todos",
       conversation: "Conversación",
@@ -99,7 +108,7 @@ export const es: SiteContent = {
       {
         title: "¿Cómo contacto al equipo de Qhipa?",
         answer:
-          "Escríbenos por WhatsApp a cualquiera de nuestros números: +51 956 295 695 o +51 976 041 753. Somos personas reales y estaremos felices de orientarte.",
+          "Escríbenos por WhatsApp a cualquiera de nuestros números: +51 976 041 753. Somos personas reales y estaremos felices de orientarte.",
       },
     ],
     aside: {
@@ -110,9 +119,9 @@ export const es: SiteContent = {
     },
   },
   team: {
-    title: "Las personas detrás de Qhipa",
+    title: "El Team detrás de Qhipa",
     description:
-      "Somos personas a las que nos gustan los idiomas, conocer gente y crear espacios donde hablar sin miedo a equivocarse.",
+      "Nos encantan los idiomas, conocer gente y crear espacios donde puedas hablar sin miedo a equivocarte.",
     roles: ["Co-fundador y coach", "Co-fundador", "Redes y comunidad"],
     cta: "Escríbele",
     whatsappMessageTemplate:
@@ -135,7 +144,7 @@ export const es: SiteContent = {
   notes: {
     headerBadge: "221 y creciendo",
     headerCta: "¿Te sumas?",
-    steps: "Cajamarca habla 👀",
+    resources: "esto lo vamos llenando entre todos ✍️",
     gallery: "Aquí se viene a conversar",
     team: "Gente que habla con gente",
     footer: "Nos vemos esta semana :)",

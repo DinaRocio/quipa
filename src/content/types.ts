@@ -3,9 +3,10 @@ export interface FaqItem {
   answer: string;
 }
 
-export interface StepItem {
+export interface ResourceItem {
   title: string;
   body: string;
+  href: string;
 }
 
 export interface SiteContent {
@@ -14,7 +15,7 @@ export interface SiteContent {
     description: string;
   };
   nav: {
-    how: string;
+    resources: string;
     gallery: string;
     faq: string;
     team: string;
@@ -35,11 +36,17 @@ export interface SiteContent {
     whatsappMessageNav: string;
     whatsappMessageHero: string;
   };
-  steps: {
+  resources: {
     kicker: string;
     title: string;
     description: string;
-    items: StepItem[];
+    items: ResourceItem[];
+    contribute: {
+      title: string;
+      body: string;
+      cta: string;
+      whatsappMessage: string;
+    };
   };
   gallery: {
     kicker: string;
@@ -93,7 +100,7 @@ export interface SiteContent {
   notes: {
     headerBadge: string;
     headerCta: string;
-    steps: string;
+    resources: string;
     gallery: string;
     team: string;
     footer: string;
