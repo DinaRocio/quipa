@@ -17,7 +17,7 @@ import {
   SocialRow,
 } from "@/ui/footer";
 
-const PORTFOLIO_URL = "https://dinarocio.com/";
+const PORTFOLIO_URL = "https://dinarocio.dev/";
 
 const LOGO_URL = "/images/brand/logo.png";
 
